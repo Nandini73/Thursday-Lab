@@ -1,0 +1,28 @@
+//Q2.4:Write a program to accept choice from user and perform the operation: fibonacci series:
+import java.util.Scanner;
+public class Fibonacci  {
+  
+    public static void main(String[] args) {
+        fibonacci();
+    }
+    public static void  fibonacci()
+    {
+     
+         int n, first = 0,next = 1;
+          
+            System.out.println("Enter how may fibonnaci numbers to print");
+            Scanner scanner = new Scanner(System.in);//to accept value
+            n = scanner.nextInt();
+            System.out.print("The first " + n + " Fibonacci numbers are: ");
+            System.out.print(first + " " + next);
+            for (int i = 1; i<=n-2; ++i)//logical operation
+            {
+                int sum = first + next;
+                first = next;
+                next = sum;
+                System.out.print(" " + sum);
+            }
+  
+    }
+  
+}
