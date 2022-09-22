@@ -1,0 +1,27 @@
+//Q2.5: Write a program to accept choice from user and perform the operation:Prime no or Not
+import java.util.Scanner; 
+ public class PrimeNumber 
+ { 
+                 public static void main(String args[]) {
+                     primeNumber();
+                 }
+                 public static void primeNumber()
+              { 
+                   int num,b,c; 
+                   Scanner s=new Scanner(System.in); //to accept value from user
+                   System.out.println("Enter a number"); 
+                   num =s.nextInt(); 
+                   b=1; 
+                   c=0; 
+                    while(b<= num) 
+                       { 
+                           if((num%b)==0) //for remainder
+                              c=c+1; 
+                              b++; //increament
+                       } 
+                        if(c==2) 
+                        System.out.println(num +" is a prime number"); 
+                        else 
+                        System.out.println(num +" is not a prime number"); 
+              } 
+ } 
