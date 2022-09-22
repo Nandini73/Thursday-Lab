@@ -1,0 +1,29 @@
+//Q2.3:Write a program to accept choice from user and perform the operation :Armstrong number or not
+import java.util.Scanner;
+public class ArmstrongNum {
+
+    public static void main(String[] args) 
+    {
+        armstrongNum();
+    }
+    public static void armstrongNum()
+{
+        int num, number, temp, total = 0;
+        System.out.println("Enter three digit number");
+        Scanner scanner = new Scanner(System.in);//to accept the value from user
+        num = scanner.nextInt();
+        scanner.close();
+        number = num;
+
+        for( ;number!=0;number /= 10)
+        {
+            temp = number % 10;//for remainder
+            total = total + temp*temp*temp;
+        }
+
+        if(total == num)//if total=num the it is armstrong number
+            System.out.println(num + " Is an Armstrong number");
+        else
+            System.out.println(num + " Is not an Armstrong number");
+    }
+}
